@@ -35,27 +35,26 @@ config_webrx: configuration options for OpenWebRX
 #       https://github.com/simonyiszk/openwebrx/wiki
 
 # ==== Server settings ====
-web_port=8073
-server_hostname="localhost" # If this contains an incorrect value, the web UI may freeze on load (it can't open websocket)
-max_clients=20
+web_port=80
+server_hostname="empfaengr" # If this contains an incorrect value, the web UI may freeze on load (it can't open websocket)
+max_clients=3
 
 # ==== Web GUI configuration ====
-receiver_name="[Callsign]"
-receiver_location="Budapest, Hungary"
-receiver_qra="JN97ML"
-receiver_asl=200
-receiver_ant="Longwire"
+receiver_name="DL0MUC"
+receiver_location="Munich, Germany"
+receiver_qra="JN58SD"
+receiver_asl=515
+receiver_ant="Discone"
 receiver_device="RTL-SDR"
-receiver_admin="example@example.com"
-receiver_gps=(47.000000,19.000000)
+receiver_admin="mail@dl0muc.de"
+receiver_gps=(48.153585,11.560716)
 photo_height=350
-photo_title="Panorama of Budapest from Schönherz Zoltán Dormitory"
+photo_title=""
 photo_desc="""
-You can add your own background photo and receiver information.<br />
 Receiver is operated by: <a href="mailto:%[RX_ADMIN]">%[RX_ADMIN]</a><br/>
 Device: %[RX_DEVICE]<br />
 Antenna: %[RX_ANT]<br />
-Website: <a href="http://localhost" target="_blank">http://localhost</a>
+Website: <a href="http://dl0muc.de" target="_blank">http://dl0muc.de</a>
 """
 
 # ==== sdr.hu listing ====
@@ -73,7 +72,7 @@ fft_size=4096
 fft_voverlap_factor=0.3 #If it is above 0, multiple FFTs will be used for creating a line on the diagram.
 samp_rate = 250000
 center_freq = 145525000
-rf_gain = 5 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
+rf_gain = 0 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
 ppm = 0
 
 audio_compression="adpcm" #valid values: "adpcm", "none"
